@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+
+    
+    <title>Document</title>
+</head>
+<body>
+        <div id="tab-container" class="tab-container">
+                <ul class='etabs'>
+                  <li class='tab'><a href="#step1">Step1</a></li>
+                  <li class='tab'><a href="#step2">step2</a></li>
+                  <li class='tab'><a href="#step3">step3</a></li>
+                </ul>
+                <div id="step1">
+                    <form action="">
+                        <select name="Salutation" id="salutation" required>
+                            <option value="Mr.">Mr.</option>
+                            <option value="Mrs">Ms.</option>
+                            <option value="Ms.">Mrs.</option>
+                        </select>
+                        <input type="text" placeholder="Firstname" required>
+                        <input type="text" placeholder="lastname" required>
+                        <br>
+                        <input type="email" placeholder="email">
+                        <input type="text" placeholder="Mobile Number">
+                        <br>
+                        <input type="date" name="bday" max="1979-12-31" min="2001-12-31" placeholder="Date of birth">
+                        <br>
+                        <input type="radio" name="program" value="male" >Certificate Program
+                        <input type="radio" name="program" value="male" >Diploma Program
+                        <input type="radio" name="program" value="male" >Post Graduate Diploma Program
+                        <input type="radio" name="program" value="male" >Executive Program
+                        <br>
+                        <select name="Choose programs" id="">
+                            <option value="Choose">Choose Program</option>
+                        </select>
+                        <select name="Course Info" id="">
+                            <option value="Course Info">Course Info</option>
+                        </select>
+                        <button>Next</button>
+                    </form>
+                </div>
+                <div id="step2">
+                    <form action="">
+                        <div class="myname">
+                            <select name="Salutation" id="salutation" required>
+                                <option value="Mr.">Mr.</option>
+                                <option value="Mrs">Ms.</option>
+                                <option value="Ms.">Mrs.</option>
+                            </select>
+                            <input class="firstname" type="text" placeholder="Firstname" required>
+                            <input  type="text" placeholder="Lastname" required>
+                        </div>
+                        <div class="fathers-name">
+                            <select name="Salutation" id="salutation" required>
+                                <option value="Mr.">Mr.</option>
+                                <option value="Mrs">Ms.</option>
+                                <option value="Ms.">Mrs.</option>
+                            </select>
+                            <input type="text" placeholder="Father's Firstname" required>
+                            <input type="text" placeholder="Father's Lastname" required>
+                        </div>
+                        <div class="mothers-name">
+                            <select name="Salutation" id="salutation" required>
+                                    <option value="Mr.">Mr.</option>
+                                    <option value="Mrs">Ms.</option>
+                                    <option value="Ms.">Mrs.</option>
+                            </select>
+                            <input type="text" placeholder="Mother's Firstname" required>
+                            <input type="text" placeholder="Mother's lastname" required>
+                        </div>
+                        
+                        <div class="marital">
+                            <input type="date" name="bday" max="1979-12-31" min="2001-12-31" placeholder="Date of birth">
+                            <select name="Marital" id="marital" required>
+                                <option value="married">Married</option>
+                                <option value="unmarried">Unmarried</option>
+                                <option value="divorced">Divorced</option>
+                            </select>
+                            <input id="spouse" type="text" placeholder="Spouse Name" required>
+                        </div>
+                        <div>
+                            <select name="gender" id="gender" required>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="others">Others</option>
+                            </select>
+                            <input id="adhar" type="text" placeholder="Adharcard Number" required>
+                            <select name="Blood Group" id="blood__group" required>
+                                <option value="O+">O+</option>
+                                <option value="O-">O-</option>
+                                <option value="A+">A+</option>
+                            </select>
+                        </div>
+                        <div class="caste">
+                            <select name="caste" id="caste" required>
+                                <option value="General">General</option>
+                                <option value="OBC">OBC</option>
+                                <option value="SC">SC</option>
+                            </select>
+                            <select name="nationality" id="nationality" required>
+                                <option value="Indian">Indian</option>
+                                <option value="German">German</option>
+                                <option value="British">British</option>
+                            </select>
+                            <select name="domicile" id="domicile" required>
+                                <option value="Indian">Indian</option>
+                                <option value="German">German</option>
+                                <option value="British">British</option>
+                            </select>
+                        </div>
+                        
+                    </form>
+                </div>
+                <div id="step3">
+                 
+                  <select name="Choose programs" id="">
+                        <option value="Choose">Choose Program</option>
+                    </select>
+                    <select name="Course Info" id="">
+                        <option value="Course Info">Course Info</option>
+                    </select>
+                    <button>Next</button>
+                </div>
+            </div>
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.easytabs/3.2.0/jquery.easytabs.min.js"></script>
+    <script src="app.js"></script>
+    
+</body>
+</html>
