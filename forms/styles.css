@@ -17,7 +17,8 @@
   padding: 30px;
 }
 
-#tab-container .etabs {
+#tab-container ul {
+  height: 90px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -28,50 +29,99 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  background-color: #de4651;
 }
 
 #tab-container li {
+  width: 30%;
+  font-size: 25px;
   list-style-type: none;
   padding: 30px;
+  border-right: 2px solid white;
 }
 
-#tab-container a {
+#tab-container li a {
   text-decoration: none;
-  color: black;
-  font-size: 27px;
+  color: white;
 }
 
-#tab-container input {
-  border-radius: 5px;
-  width: 37%;
-  height: 30px;
-  margin-left: 3%;
-  margin-right: 3%;
-  margin-top: 3%;
-  margin-bottom: 3%;
-  padding: 5px;
+#tab-container li a:hover {
+  color: #e6e8ed;
 }
 
-#tab-container select {
-  border-radius: 3px;
-  height: 40px;
-  padding: 10px;
-  width: 25%;
+#tab-container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-#tab-container #salutation {
+#tab-container form div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 30px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#tab-container form div .salutation {
   width: 6%;
 }
 
-#tab-container #marital {
-  width: 11%;
+#tab-container form select {
+  width: 22%;
+  height: 50px;
+  padding: 5px;
+  padding-left: 10px;
+  border: 2px solid #de4651;
+  border-radius: 5px;
+  font-size: 20px;
+  color: grey;
+  outline: none;
 }
 
-#tab-container #spouse {
-  width: 7%;
+#tab-container form input {
+  outline: none;
+  font-size: 20px;
+  width: 30%;
+  height: 40px;
+  padding: 5px;
+  border: 2px solid #de4651;
+  border-radius: 5px;
+  color: grey;
 }
 
-#tab-container #adhar {
-  width: 20%;
+#tab-container form #date {
+  font-size: 20px;
+  color: grey;
+}
+
+#tab-container form .name {
+  width: 38%;
+}
+
+#tab-container form .lastname {
+  width: 40%;
+}
+
+#tab-container form .course select {
+  font-size: 20px;
+  min-width: 45%;
+}
+
+#tab-container form .radio input {
+  font-size: 200px;
+  color: grey;
 }
 /*# sourceMappingURL=styles.css.map */

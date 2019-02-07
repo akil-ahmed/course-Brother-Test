@@ -3,6 +3,7 @@ const mySiema = new Siema({
     loop: true,
     easing: 'ease-out',
     draggable: false,
+    autoHover: true,
   });
   
   // listen for keydown event

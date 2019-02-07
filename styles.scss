@@ -17,67 +17,6 @@ $pink: #fccfcf;
     
 }
 
-//Beginning of navbar
-nav {
-    display: flex;
-    position: relative;
-    height: 10vh;
-    flex-direction: row;
-    width: 100vw;
-    background-color: $rustyRed;
-    flex-direction: row-reverse;
-    .navbar__logo{
-        position: relative;
-        top: 7px;
-        right: 32%;
-        font-size: 60px;
-        font-style: sans-serif;
-        color: $white;
-    }
-    ul{
-        order: -1;
-        width: 60%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        
-    }
-    li{
-        font-size: 20px;
-        list-style-type: none;
-        padding-top: 25px;
-    }
-    a{
-        text-decoration: none;
-        color: $white;
-        &:hover {
-            color: $pink;
-        }
-    }
-    button {
-        position: relative;
-        bottom: 3px;
-        font-size: 18px;
-        color: $white;
-        background-color: $buttonRed;
-        height: 30px;
-        width: 150px;
-        border-radius: 60px;
-        outline: none;
-        box-shadow: 1px 1px 1px 1px $buttonRed;
-        &:hover {
-            box-shadow: .3px .3px .3px .3px $buttonRed;
-            transition: 0.2s;
-        }
-    }
-    .navbar__nav__button {
-        width: 30%;
-        flex: display;
-        flex-direction: column-reverse;
-    }
-
-}
-//Ending of mavbar
 
 //beginning of siema
 
@@ -96,7 +35,7 @@ nav {
             height: 100%;
         }
         .siema__image{
-            height: 75vh;
+            height: 60vh;
             display: flex;
             box-align: center;
             align-items: center;
@@ -131,6 +70,7 @@ nav {
                 font-size: 23px;
                 background-color: $rustyRed;
                 border: none;
+                outline: none;
                 box-shadow: 1px 1px 1px 1px $buttonRed;
                 width: 100px;
                 height: 50px;
@@ -148,7 +88,9 @@ nav {
         }
 
     }
-   
+   button i {
+        opacity: 0.4;
+   }
       
       img {
         width: 100%;
@@ -210,11 +152,18 @@ nav {
                 width: 100%;
                 height: 150px;
             }
+            a {
+                text-decoration: none;
+               
+            }
             h3 {
                 color: $darkGrey;
                 font-size: 15px;
                 padding: 8px;
                 padding-top: 17px;
+                &:hover{
+                    color: $grey;
+                 }
             }
             p {
                 font-size: 12px;
@@ -243,6 +192,7 @@ nav {
     hr{
         margin-top: 25px;
         margin-bottom: 25px;
+        width: 40%;
     }
     .main__sidebar__side{
         h2{
@@ -257,6 +207,10 @@ nav {
         }
     }
     .main__sidebar__social{
+        .main__sidebar__social__bar {
+            display: flex;
+            flex-direction: row;
+        }
         h2{
             color: $rustyRed;
             font-size: 17px;
@@ -265,16 +219,73 @@ nav {
         li{
             list-style-type: none;
             padding-bottom: 4px;
-            a{
+            margin: 15px;
+        }
+        #facebook {
+            color: #3b5998;
+            
+        }
+        #twitter {
+            color: #1DA1F2;
+            
+        }
+        #instagram {
+            color: #c32aa3;
+        }
+        #linkedIn {
+            color: #007bb5;
+            
+        }
+        i {
+            padding-right: 5px;
+            font-size: 30px;
+        }
+        i:hover {
+            
+                font-size: 33px;
+                transition: .2s;
+        }
+        }
+    }
+
+    .main__sidebar__tagbar {
+        h2 {
+            color: $rustyRed;
+            font-size: 17px;
+            padding-bottom: 25px;
+        }
+        .main__sidebar__tagbar__tags{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 70%;
+
+            div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-width: 100px;
+                margin-top: 10px;
+                margin-right: 20px;
+                height: 40px;
+                border: 2.5px solid $rustyRed;
+                border-radius: 30px;
                 
+            }
+            a {
+                color: $grey;
                 font-weight: bold;
+                font-size: 15px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-left: 10px;
+                padding-right: 10px;
                 text-decoration: none;
-                color: $blue;
                 &:hover {
-                    color: $rustyRed;
+                    color: $darkGrey;
                 }
             }
         }
     }
-}
+
 //End of side bar content

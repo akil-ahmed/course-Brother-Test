@@ -5,26 +5,13 @@
 	<title>Document</title>
 	<link rel="stylesheet" href="styles.css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/siema@1.5.1/dist/siema.min.js"></script>
 </head>
 <body>
 	<script>
 		new Siema();
 	</script>
-	<nav class="navbar">
-		<h1 class="navbar__logo">Da</h1>
-		<ul class="navbar__nav">
-			<li><a href="#">Home</a></li>
-			<li><a href="#">Profile</a></li>
-			<li><a href="#">About Us</a></li>
-			<li><a href="#">Contact Us</a></li>
-			<!-- <li><div class="navbar__nav__button">
-				<li><button class="navbar__nav__signup">Sign Up</button></li>
-				<li><button class="navBar__nav__login">Log In</button></li>
-			</div>
-			</li> -->
-		</ul>
-	</nav>
 
 	<div class="container">
 		<div class="siema">
@@ -55,8 +42,8 @@
 			</div>
 	
 		</div>
-		<button class="next">&rarr;</button>
-		<button class="prev">&larr;</button>
+		<button class="next"><i class="fas fa-chevron-right"></i></button>
+		<button class="prev"><i class="fas fa-chevron-left"></i></button>
 	</div>
 	
 
@@ -64,55 +51,56 @@
 		<div class="main__contents">
 			<div class="main__contents__snippets">
 				<img src="images/image.jpg" alt="">
-				<h3>Washing Powder Nirma</h3>
+				<a href=""><h3>Washing Powder Nirma</h3></a>
+				
 				<p>Contrary to popular belief, Lorem Ipsum is not simply random text. Contrary to popular belief, Lorem Ipsum is not simply random text </p>
 			
 			</div>
 			<div class="main__contents__snippets">
 				<img src="images/image.jpg" alt="">
-				<h3>Washing Powder Nirma</h3>
+				<a href=""><h3>Washing Powder Nirma</h3></a>
 				<p>Contrary to popular belief, Lorem Ipsum is not simply random text. Contrary to popular belief, Lorem Ipsum is not simply random text</p>
 			
 			</div>
 			<div class="main__contents__snippets">
 				<img src="images/image.jpg" alt="">
-				<h3>Washing Powder Nirma</h3>
+				<a href=""><h3>Washing Powder Nirma</h3></a>
 				<p>Contrary to popular belief, Lorem Ipsum is not simply random text. Contrary to popular belief, Lorem Ipsum is not simply random text</p>
 			
 			</div>
 			<div class="main__contents__snippets">
 				<img src="images/image.jpg" alt="">
-				<h3>Washing Powder Nirma</h3>
+				<a href=""><h3>Washing Powder Nirma</h3></a>
 				<p>Contrary to popular belief, Lorem Ipsum is not simply random text. Contrary to popular belief, Lorem Ipsum is not simply random text</p>
 			
 			</div>
 			<div class="main__contents__snippets">
 				<img src="images/image.jpg" alt="">
-				<h3>Washing Powder Nirma</h3>
+				<a href=""><h3>Washing Powder Nirma</h3></a>
 				<p>Contrary to popular belief, Lorem Ipsum is not simply random text. Contrary to popular belief, Lorem Ipsum is not simply random text</p>
 			
 			</div>
 			<div class="main__contents__snippets">
 				<img src="images/image.jpg" alt="">
-				<h3>Washing Powder Nirma</h3>
+				<a href=""><h3>Washing Powder Nirma</h3></a>
 				<p>Contrary to popular belief, Lorem Ipsum is not simply random text. Contrary to popular belief, Lorem Ipsum is not simply random text</p>
 			
 			</div>
 			<div class="main__contents__snippets">
 				<img src="images/image.jpg" alt="">
-				<h3>Washing Powder Nirma</h3>
+				<a href=""><h3>Washing Powder Nirma</h3></a>
 				<p>Contrary to popular belief, Lorem Ipsum is not simply random text. Contrary to popular belief, Lorem Ipsum is not simply random text</p>
 			
 			</div>
 			<div class="main__contents__snippets">
 				<img src="images/image.jpg" alt="">
-				<h3>Washing Powder Nirma</h3>
+				<a href=""><h3>Washing Powder Nirma</h3></a>
 				<p>Contrary to popular belief, Lorem Ipsum is not simply random text. Contrary to popular belief, Lorem Ipsum is not simply random text</p>
 			
 			</div>
 			<div class="main__contents__snippets">
 				<img src="images/image.jpg" alt="">
-				<h3>Washing Powder Nirma</h3>
+				<a href=""><h3>Washing Powder Nirma</h3></a>
 				<p>Contrary to popular belief, Lorem Ipsum is not simply random text. Contrary to popular belief, Lorem Ipsum is not simply random text</p>
 			
 			</div>
@@ -128,11 +116,23 @@
 			<hr>
 			<div class="main__sidebar__social">
 				<h2>Connect with us</h2>
-				<li><a href="#">Facebook</a></li>
-				<li><a href="#">Twitter</a></li>
-				<li><a href="#">Instagram</a></li>
-				<li><a href="#">LinkedIn</a></li>
-				<li><a href="#">Reddit</a></li>
+				<div class="main__sidebar__social__bar">
+					<li><a id="facebook" href="#"><i class="fab fa-facebook-f"></i></a></li>
+					<li><a  id="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+					<li><a id="instagram" href="#"><i class="fab fa-instagram"></i></a></li>
+					<li><a id="linkedIn" href="#"><i class="fab fa-linkedin-in"></i></a></li>
+				</div>
+				
+			</div>
+			<hr>
+			<div class="main__sidebar__tagbar">
+				<h2>Tags</h2>
+				<div class="main__sidebar__tagbar__tags">
+					<div><a href="">javascript</a></div>
+					<div><a href="">mongoDB</a></div>
+					<div><a href="">React</a></div>
+					<div><a href="">Ruby & Rails & a bit of javascript</a></div>
+				</div>	
 			</div>
 		</div>
 	</div>

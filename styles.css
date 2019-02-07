@@ -5,94 +5,6 @@
   overflow-x: hidden;
 }
 
-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  height: 10vh;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  width: 100vw;
-  background-color: #de4651;
-  -ms-flex-direction: row-reverse;
-      flex-direction: row-reverse;
-}
-
-nav .navbar__logo {
-  position: relative;
-  top: 7px;
-  right: 32%;
-  font-size: 60px;
-  font-style: sans-serif;
-  color: white;
-}
-
-nav ul {
-  -webkit-box-ordinal-group: 0;
-      -ms-flex-order: -1;
-          order: -1;
-  width: 60%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-nav li {
-  font-size: 20px;
-  list-style-type: none;
-  padding-top: 25px;
-}
-
-nav a {
-  text-decoration: none;
-  color: white;
-}
-
-nav a:hover {
-  color: #fccfcf;
-}
-
-nav button {
-  position: relative;
-  bottom: 3px;
-  font-size: 18px;
-  color: white;
-  background-color: #9b1515;
-  height: 30px;
-  width: 150px;
-  border-radius: 60px;
-  outline: none;
-  -webkit-box-shadow: 1px 1px 1px 1px #9b1515;
-          box-shadow: 1px 1px 1px 1px #9b1515;
-}
-
-nav button:hover {
-  -webkit-box-shadow: 0.3px 0.3px 0.3px 0.3px #9b1515;
-          box-shadow: 0.3px 0.3px 0.3px 0.3px #9b1515;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-}
-
-nav .navbar__nav__button {
-  width: 30%;
-  -webkit-box-flex: display;
-      -ms-flex: display;
-          flex: display;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
-}
-
 .container {
   position: relative;
   width: 100%;
@@ -113,7 +25,7 @@ nav .navbar__nav__button {
 }
 
 .container .siema .siema__image {
-  height: 75vh;
+  height: 60vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -168,6 +80,7 @@ nav .navbar__nav__button {
   font-size: 23px;
   background-color: #de4651;
   border: none;
+  outline: none;
   -webkit-box-shadow: 1px 1px 1px 1px #9b1515;
           box-shadow: 1px 1px 1px 1px #9b1515;
   width: 100px;
@@ -182,6 +95,10 @@ nav .navbar__nav__button {
 .container .siema .siema__text .siema__image__button:hover {
   cursor: pointer;
   color: grey;
+}
+
+.container button i {
+  opacity: 0.4;
 }
 
 .container img {
@@ -266,11 +183,19 @@ nav .navbar__nav__button {
   height: 150px;
 }
 
+.main .main__contents .main__contents__snippets a {
+  text-decoration: none;
+}
+
 .main .main__contents .main__contents__snippets h3 {
   color: #474849;
   font-size: 15px;
   padding: 8px;
   padding-top: 17px;
+}
+
+.main .main__contents .main__contents__snippets h3:hover {
+  color: grey;
 }
 
 .main .main__contents .main__contents__snippets p {
@@ -287,6 +212,7 @@ nav .navbar__nav__button {
 .main hr {
   margin-top: 25px;
   margin-bottom: 25px;
+  width: 40%;
 }
 
 .main .main__sidebar__side h2 {
@@ -301,6 +227,16 @@ nav .navbar__nav__button {
   line-height: 17px;
 }
 
+.main .main__sidebar__social .main__sidebar__social__bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
 .main .main__sidebar__social h2 {
   color: #de4651;
   font-size: 17px;
@@ -310,15 +246,85 @@ nav .navbar__nav__button {
 .main .main__sidebar__social li {
   list-style-type: none;
   padding-bottom: 4px;
+  margin: 15px;
 }
 
-.main .main__sidebar__social li a {
-  font-weight: bold;
-  text-decoration: none;
-  color: #0E216C;
+.main .main__sidebar__social #facebook {
+  color: #3b5998;
 }
 
-.main .main__sidebar__social li a:hover {
+.main .main__sidebar__social #twitter {
+  color: #1DA1F2;
+}
+
+.main .main__sidebar__social #instagram {
+  color: #c32aa3;
+}
+
+.main .main__sidebar__social #linkedIn {
+  color: #007bb5;
+}
+
+.main .main__sidebar__social i {
+  padding-right: 5px;
+  font-size: 30px;
+}
+
+.main .main__sidebar__social i:hover {
+  font-size: 33px;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.main__sidebar__tagbar h2 {
   color: #de4651;
+  font-size: 17px;
+  padding-bottom: 25px;
+}
+
+.main__sidebar__tagbar .main__sidebar__tagbar__tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 70%;
+}
+
+.main__sidebar__tagbar .main__sidebar__tagbar__tags div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 100px;
+  margin-top: 10px;
+  margin-right: 20px;
+  height: 40px;
+  border: 2.5px solid #de4651;
+  border-radius: 30px;
+}
+
+.main__sidebar__tagbar .main__sidebar__tagbar__tags a {
+  color: grey;
+  font-weight: bold;
+  font-size: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-decoration: none;
+}
+
+.main__sidebar__tagbar .main__sidebar__tagbar__tags a:hover {
+  color: #474849;
 }
 /*# sourceMappingURL=styles.css.map */

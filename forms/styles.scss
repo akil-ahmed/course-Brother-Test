@@ -1,3 +1,12 @@
+$rustyRed: #de4651;
+$buttonRed: #9b1515;
+$blue: #0E216C;
+$grey: grey;
+$shadowWhite: #FAF6F6;
+$darkGrey: #474849;
+$white: white;
+$pink: #fccfcf;
+
 * {
     margin: 0;
     padding: 0;
@@ -16,46 +25,152 @@
         padding: 30px;
 
     }
-    .etabs {
+    ul {
+        height:90px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        background-color: $rustyRed;
+
     }
+//     .step2 form {
+//         display: flex;
+//         flex-direction: row;
+//         justify-content: space-around;
+//     }
+    
+//     .etabs {
+//         display: flex;
+//         flex-direction: row;
+//         justify-content: space-between;
+//     }
     li {
+        width: 30%;
+        font-size: 25px;
         list-style-type: none;
         padding: 30px;
+        border-right: 2px solid white;
+        
+        a {
+            text-decoration: none;
+            color: white;
+            &:hover {
+                color: #e6e8ed;;
+            }
+        }
     }
-    a {
-        text-decoration: none;
-        color: black;
-        font-size: 27px;
-    }
-    input {
-        border-radius: 5px;
-        width: 37%;
-        height:30px;
-        margin-left: 3%;
-        margin-right: 3%;
-        margin-top: 3%;
-        margin-bottom: 3%;
-        padding: 5px;
-    }
-    select {
-        border-radius: 3px;
-        height:40px;
-        padding: 10px;
-        width: 25%;
-    }
-    #salutation {
-        width: 6%;
-    }
-    #marital {
-        width: 11%;
-    }
-    #spouse {
-        width: 7%;
-    }
-    #adhar {
-        width: 20%;
-    }
+//     a {
+//         text-decoration: none;
+//         color: black;
+//         font-size: 27px;
+//     }
+//     input {
+//         border-radius: 5px;
+//         width: 35%;
+//         height:30px;
+        
+//         margin-top: 3%;
+//         margin-bottom: 3%;
+//         padding: 5px;
+//     }
+//     select {
+//         border-radius: 3px;
+//         height:40px;
+//         padding: 10px;
+//         width: 25%;
+//     }
+//     #salutation {
+//         width: 4%;
+//     }
+    
+//     .myname {
+//         display: flex;
+//         justify-content: space-between;
+//     }
+//     .fathers-name {
+//         display: flex;
+//         justify-content: space-between;
+//     }
+//     .mothers-name{
+//         display: flex;
+//         justify-content: space-between;
+//     }
+//     .caste {
+//         display: flex;
+//         justify-content: space-between;
+
+//     }
+//     .gender{
+//         display: flex;
+        
+//         justify-content: space-between;
+//         #gender
+//     }
+//     .marital {
+//         display: flex;
+        
+//         justify-content: space-between;
+//  }
+
+    form {
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        div {
+            display: flex;
+            padding: 30px;
+            flex-direction: row;
+            justify-content: space-between;
+            .salutation {
+                width: 6%;
+            }
+            
+        }
+        select {
+            width: 22%;
+            height: 50px;
+            padding: 5px;
+            padding-left: 10px;
+            border: 2px solid $rustyRed;
+            border-radius: 5px;
+            font-size: 20px;
+            color: $grey;
+            outline: none;
+        }
+        input {
+            outline: none;
+            font-size: 20px;
+            width: 30%;
+            height: 40px;
+            padding: 5px;
+            border: 2px solid $rustyRed;
+            border-radius: 5px;
+            color: $grey;
+        }
+        #date{
+            font-size: 20px;
+            color: $grey;
+        }
+        .name {
+            width: 38%;
+        }
+        .lastname {
+            width: 40%;
+        }
+        .course {
+            select {
+                font-size: 20px;
+                min-width: 45%;
+            }
+        }
+        .radio {
+            input {
+                font-size: 200px;
+                color: $grey;
+            }
+            
+        }
+    }    
+
 }
