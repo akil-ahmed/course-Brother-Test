@@ -14,40 +14,89 @@ $pink: #fccfcf;
     font-family: 'Montserrat', sans-serif
 }
 
-.overlay {
-  position: fixed; /* Sit on top of the page content */
+.modal {
   display: none; /* Hidden by default */
-  width: 100%; /* Full width (cover the whole page) */
-  height: 100%; /* Full height (cover the whole page) */
-  top: 0; 
+  position: relative; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding: 0px; /* Location of the box */
   left: 0;
-  right: 0;
-  bottom: 0;
-   /* Black background with opacity */
-  z-index: -1; /* Specify a stack order in case you're using a different order for other elements */
-  cursor: pointer; /* Add a pointer on hover */
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
 }
 
- h3{
-     align-self: center;
- }
-.header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    width: 100%;
-    background-color: $rustyRed;
-    color: white;
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+
+.modal-header {
+  background-color: $rustyRed;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
     h1{
         margin-left: 20px;
     }
     i {
-        margin-right: 20px;
-        font-size: 40px;
+      margin-right: 20px;
+      font-size: 40px;
+      &:hover {
+        cursor: pointer;
+        font-size: 41px;
+        transition: .2s;
     }
+  }
 }
+
+.modal-body {
+  padding: 2px 10px;
+}
+
+
+
+ h3{
+     align-self: center;
+ }
+ 
+    
 
 .add div {
     display: flex;
@@ -68,23 +117,22 @@ $pink: #fccfcf;
         cursor: pointer;
         font-size: 155px;
         transition: .2s;
-
     }
 }
 
-div.comparisontable{
+div.modal-body {
     display: flex;
     flex-direction: column;
   }
   
-  div.comparisontable img{
+  div.modal-body img {
     max-width: 100%;
     width: auto;
     height: auto;
   }
   
   
-  div.comparisontable ul.row{
+  div.modal-body ul.row {
     list-style: none;
     display: flex;
     margin: 0;
@@ -94,13 +142,13 @@ div.comparisontable{
     flex-wrap: wrap;
   }
   
-  div.comparisontable ul.row li{
+  div.modal-body ul.row li{
     flex: 1;
     padding: 15px;
     color: #434647;
   }
   
-  div.comparisontable ul.row li.legend{
+  div.modal-body ul.row li.legend{
     color: #535b5e;
     font-weight: bold;
     border: none;
@@ -110,10 +158,9 @@ div.comparisontable{
   
   
   /* very first row */
-  div.comparisontable ul.row:first-of-type li{
+  div.modal-body ul.row:first-of-type li{
     
     text-align: center;
-    border-top: 3px solid $rustyRed;
     h3 {
         padding-top: 30%;
         color: grey;
@@ -122,7 +169,7 @@ div.comparisontable{
   }
   
   /* very last row */
-  div.comparisontable ul.row:last-of-type li{
+  div.modal-body ul.row:last-of-type li{
     text-align: center;
     // box-shadow: 0 6px 6px rgba(0,0,0,0.23);
 
@@ -150,10 +197,10 @@ div.comparisontable{
   }
 
   .remove i {
-        width: 25px;
-        height: 25px;
-        background-color: $Grapefruit;
-        border-radius: 50%;
-        margin-right: 10px;
-        padding-top: 4px;
+    width: 25px;
+    height: 25px;
+    background-color: $Grapefruit;
+    border-radius: 50%;
+    margin-right: 10px;
+    padding-top: 4px;    
   }
