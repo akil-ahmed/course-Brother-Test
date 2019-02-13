@@ -14,24 +14,34 @@ $pink: #fccfcf;
     font-family: 'Montserrat', sans-serif
 }
 
-.overlay {
-  position: fixed; /* Sit on top of the page content */
+.modal {
   display: none; /* Hidden by default */
-  width: 100%; /* Full width (cover the whole page) */
-  height: 100%; /* Full height (cover the whole page) */
-  top: 0; 
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
   left: 0;
-  right: 0;
-  bottom: 0;
-   /* Black background with opacity */
-  z-index: -1; /* Specify a stack order in case you're using a different order for other elements */
-  cursor: pointer; /* Add a pointer on hover */
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal--content {
+  background-color: #fefefe;
+  margin: auto;
+  border-radius: 11px;
+  border: 1px solid #888;
+  width: 80%;
 }
 
  h3{
      align-self: center;
  }
-.header {
+.modal--content__header {
+    border-radius: 10px 10px 0px 0px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -46,6 +56,12 @@ $pink: #fccfcf;
     i {
         margin-right: 20px;
         font-size: 40px;
+        &:hover {
+          cursor: pointer;
+          font-size: 41px;
+          transition: .2s;
+  
+      }
     }
 }
 
@@ -66,51 +82,47 @@ $pink: #fccfcf;
     top: 300px;
     &:hover {
         cursor: pointer;
-        font-size: 155px;
+        font-size: 152px;
         transition: .2s;
 
     }
 }
 
-div.comparisontable{
+div.modal--content__comparisontable{
     display: flex;
     flex-direction: column;
-  }
-  
-  div.comparisontable img{
-    max-width: 100%;
-    width: auto;
-    height: auto;
-  }
-  
-  
-  div.comparisontable ul.row{
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    flex: 1;
-    width: 100%;
-    flex-wrap: wrap;
-  }
-  
-  div.comparisontable ul.row li{
-    flex: 1;
-    padding: 15px;
-    color: #434647;
-  }
-  
-  div.comparisontable ul.row li.legend{
-    color: #535b5e;
-    font-weight: bold;
-    border: none;
-    width: 200px;
-    border-bottom: 3px solid $rustyRed;
+    img{
+      max-width: 100%;
+      width: auto;
+      height: auto;
+    }
+    ul.modal--content__comparisontable__row{
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      flex: 1;
+      width: 100%;
+      flex-wrap: wrap;
+      li{
+        flex: 1;
+        padding: 15px;
+        color: #434647;
+        
+      }
+      .modal--content__comparisontable__row__tag{
+        color: #535b5e;
+        font-weight: bold;
+        border: none;
+        width: 200px;
+        border-bottom: 3px solid $rustyRed;
+      }
+    }
   }
   
   
   /* very first row */
-  div.comparisontable ul.row:first-of-type li{
+  div.modal--content__comparisontable ul.modal--content__comparisontable__row:first-of-type li{
     
     text-align: center;
     border-top: 3px solid $rustyRed;
@@ -122,7 +134,7 @@ div.comparisontable{
   }
   
   /* very last row */
-  div.comparisontable ul.row:last-of-type li{
+  div.modal--content__comparisontable ul.modal--content__comparisontable__row:last-of-type li{
     text-align: center;
     // box-shadow: 0 6px 6px rgba(0,0,0,0.23);
 
@@ -130,7 +142,7 @@ div.comparisontable{
   
  
   
-  .row {
+  .modal--content__comparisontable__row {
     button {
         background-color: $rustyRed;
         width: 100%;
@@ -142,14 +154,14 @@ div.comparisontable{
         font-size: 18px;
         &:hover {
             cursor: pointer;
-            font-size: 20px;
+            font-size: 19px;
             transition: .2s;
     
         }
     }
   }
 
-  .remove i {
+  .modal--content__comparisontable__row__remove i {
         width: 25px;
         height: 25px;
         background-color: $Grapefruit;
@@ -157,3 +169,41 @@ div.comparisontable{
         margin-right: 10px;
         padding-top: 4px;
   }
+
+.floating {
+  height: 15vh;
+  background-color: #fff;
+  box-shadow: 5px 0px 5px 0px grey;
+  p{
+    color: grey;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 1%;
+  }
+
+  .floating__form {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    margin-left: 1%;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  input {
+    border: none;
+    background-color:  rgb(196, 196, 196);
+    color: grey;
+    width: 25%;
+    padding: 5px;
+    
+  }
+  button {
+    border: none;
+    outline: none;
+    background-color: $rustyRed;
+    color: white;
+    width: 16%;
+  }
+  
+}
